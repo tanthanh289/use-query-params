@@ -16,7 +16,7 @@ import { PushReplaceHistory, UrlUpdateType } from './types';
 export function createLocationWithChanges(
   queryReplacements: EncodedQuery,
   location: Location,
-  updateType: UrlUpdateType = 'pushIn',
+  updateType: UrlUpdateType = 'replaceIn',
   stringifyOptions?: ExtendedStringifyOptions
 ): Location {
   switch (updateType) {
@@ -36,7 +36,7 @@ export function createLocationWithChanges(
 export function updateUrlQuery(
   history: PushReplaceHistory,
   location: Location,
-  updateType: UrlUpdateType = 'pushIn'
+  updateType: UrlUpdateType = 'replaceIn'
 ): void {
   switch (updateType) {
     case 'pushIn':
